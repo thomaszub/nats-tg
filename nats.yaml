@@ -1,0 +1,10 @@
+config:
+  jetstream:
+    enabled: true
+    fileStore:
+      pvc:
+        size: 1Gi
+service:
+  merge:
+    spec:
+      type: LoadBalancer
