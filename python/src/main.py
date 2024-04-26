@@ -2,10 +2,12 @@ import asyncio
 
 import nats
 
+nats_url = "nats://localhost:4222"
+
 
 async def main():
     try:
-        conn = await nats.connect("nats://localhost:4222")
+        conn = await nats.connect(nats_url)
         print(f"Connection: {conn.connected_url.geturl()}")
         js = conn.jetstream()
         kv = await js.key_value("last_message")
