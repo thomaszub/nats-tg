@@ -1,0 +1,15 @@
+version: '3'
+
+tasks:
+  create-streams:
+    desc: Creates the needed NATS streams
+    cmds:
+      - kubectl exec deployments/nats-box -- nats stream add --defaults --subjects "users.events.>" UsersEvents
+  purge-streams:
+    desc: Purge all NATS streams
+    cmds:
+      - kubectl exec deployments/nats-box -- nats stream purge -f UsersEvents
+  view-streams:
+    desc: View all NATS streams
+    cmds:
+      - kubectl exec -it deployments/nats-box -- nats stream view UsersEvents
