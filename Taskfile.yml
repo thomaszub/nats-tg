@@ -4,9 +4,10 @@ tasks:
   setup:
     desc: Creates the needed NATS streams and key-value stores
     cmds:
-      - kubectl exec deployments/nats-box -- nats stream add --defaults --subjects "accounts.commands.>" AccountsCommands
+      - kubectl exec deployments/nats-box -- nats stream add --retention=work --defaults --subjects "accounts.commands.>" AccountsCommands
       - kubectl exec deployments/nats-box -- nats stream add --defaults --subjects "accounts.errors.>" AccountsErrors
       - kubectl exec deployments/nats-box -- nats stream add --defaults --subjects "accounts.events.>" AccountsEvents
+      - kubectl exec deployments/nats-box -- nats consumer add --pull --deliver=all --ack=explicit --replay=original --max-pending=1 --defaults AccountsCommands AccountsService
       - kubectl exec deployments/nats-box -- nats kv add AccountsStore
   accounts:purge:
     desc: Purge Accounts streams and key-value store
