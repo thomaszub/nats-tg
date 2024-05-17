@@ -1,0 +1,13 @@
+{
+  "name": "account-service",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "nats": "^2.25.0"
+  }
+}
