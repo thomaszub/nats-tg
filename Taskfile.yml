@@ -4,22 +4,24 @@ tasks:
   setup:
     desc: Creates the needed NATS streams and key-value stores
     cmds:
-      - kubectl exec deployments/nats-box -- nats stream add --defaults --subjects "users.events.>" UsersEvents
-      - kubectl exec deployments/nats-box -- nats kv add UsersStore
-  users-events:purge:
-    desc: Purge User Events stream
+      - kubectl exec deployments/nats-box -- nats stream add --defaults --subjects "accounts.commands.>" AccountsCommands
+      - kubectl exec deployments/nats-box -- nats stream add --defaults --subjects "accounts.events.>" AccountsEvents
+      - kubectl exec deployments/nats-box -- nats kv add AccountsStore
+  accounts:purge:
+    desc: Purge Accounts streams and key-value store
     cmds:
-      - kubectl exec deployments/nats-box -- nats stream purge -f UsersEvents
-  users-store:purge:
-    desc: Purge User key-value store
+      - kubectl exec deployments/nats-box -- nats stream purge -f AccountsEvents
+      - kubectl exec deployments/nats-box -- nats kv del -f AccountsStore
+      - kubectl exec deployments/nats-box -- nats kv add AccountsStore
+  accounts:commands:view:
+    desc: View AccountsCommands stream
     cmds:
-      - kubectl exec deployments/nats-box -- nats kv del -f UsersStore
-      - kubectl exec deployments/nats-box -- nats kv add UsersStore
-  users-events:view:
-    desc: View Users Events stream
+      - kubectl exec -it deployments/nats-box -- nats stream view AccountsCommands
+  accounts:events:view:
+    desc: View AccountsEvents stream
     cmds:
-      - kubectl exec -it deployments/nats-box -- nats stream view UsersEvents
-  users-store:view:
-    desc: View Users key-value store
+      - kubectl exec -it deployments/nats-box -- nats stream view AccountsEvents
+  accounts:store:view:
+    desc: View AccountsStore
     cmds:
-      - kubectl exec -it deployments/nats-box -- nats kv ls UsersStore
+      - kubectl exec -it deployments/nats-box -- nats kv ls AccountsStore
