@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "deposit-money-command",
+  "$id": "DepositMoneyCommand",
   "title": "Deposit Money Command",
   "description": "Command that money should be deposited to a banking account",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "money-withdrawn-event",
+  "$id": "MoneyWithdrawnEvent",
   "title": "Money Withdrawn Event",
   "description": "Event that money is withdrawn from a banking account",
   "type": "object",

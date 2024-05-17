@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "withdraw-money-command",
+  "$id": "WithdrawMoneyCommand",
   "title": "Withdraw Money Command",
   "description": "Command that money should be withdrawn from a banking account",
   "type": "object",

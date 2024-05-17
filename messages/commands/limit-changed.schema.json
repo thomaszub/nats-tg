@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "change-limit-command",
+  "$id": "ChangeLimitCommand",
   "title": "Change Limit Command",
   "description": "Command that the limit of a banking account should be changed",
   "type": "object",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "account-deleted-event",
+  "$id": "AccountDeletedEvent",
   "title": "Account Deleted Event",
   "description": "Event that a existing banking account is deleted",
   "type": "object",

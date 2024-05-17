@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "delete-account-command",
+  "$id": "DeleteAccountCommand",
   "title": "Delete Account Command",
   "description": "Command that a existing banking account should be deleted",
   "type": "object",

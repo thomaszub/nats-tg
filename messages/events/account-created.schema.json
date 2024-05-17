@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "account-created-event",
+  "$id": "AccountCreatedEvent",
   "title": "Account Created Event",
   "description": "Event that a new banking account is created",
   "type": "object",
