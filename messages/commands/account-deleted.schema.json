@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "delete-account-command",
+  "title": "Delete Account Command",
+  "description": "Command that a existing banking account should be deleted",
+  "type": "object",
+  "properties": {
+    "accountId": {
+      "description": "The unique id of the banking account",
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "required": [
+    "accountId"
+  ]
+}

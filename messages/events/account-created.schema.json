@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "account-created-event",
+  "title": "Account Created Event",
+  "description": "Event that a new banking account is created",
+  "type": "object",
+  "properties": {
+    "accountId": {
+      "description": "The unique id of the banking account",
+      "type": "string",
+      "format": "uuid"
+    },
+    "limit": {
+      "description": "The limit of the banking account",
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "accountId"
+  ]
+}

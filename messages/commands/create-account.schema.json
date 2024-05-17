@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "create-account-command",
+  "title": "Create Account Command",
+  "description": "Command that a new banking account should be created",
+  "type": "object",
+  "properties": {
+    "limit": {
+      "description": "The limit of the banking account",
+      "type": "number",
+      "minimum": 0
+    }
+  }
+}

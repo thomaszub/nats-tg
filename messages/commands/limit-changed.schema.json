@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "change-limit-command",
+  "title": "Change Limit Command",
+  "description": "Command that the limit of a banking account should be changed",
+  "type": "object",
+  "properties": {
+    "accountId": {
+      "description": "The unique id of the banking account",
+      "type": "string",
+      "format": "uuid"
+    },
+    "limit": {
+      "description": "The new limit",
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": ["accountId", "limit"]
+}

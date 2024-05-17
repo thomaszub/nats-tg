@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "money-withdrawn-event",
+  "title": "Money Withdrawn Event",
+  "description": "Event that money is withdrawn from a banking account",
+  "type": "object",
+  "properties": {
+    "accountId": {
+      "description": "The unique id of the banking account",
+      "type": "string",
+      "format": "uuid"
+    },
+    "amount": {
+      "description": "The amount of withdrawn money",
+      "type": "number",
+      "exclusiveMinimum": 0
+    }
+  },
+  "required": ["accountId", "amount"]
+}

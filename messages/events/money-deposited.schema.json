@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "money-deposited-event",
+  "title": "Money Deposited Event",
+  "description": "Event that money is deposited to a banking account",
+  "type": "object",
+  "properties": {
+    "accountId": {
+      "description": "The unique id of the banking account",
+      "type": "string",
+      "format": "uuid"
+    },
+    "amount": {
+      "description": "The amount of deposited money",
+      "type": "number",
+      "exclusiveMinimum": 0
+    }
+  },
+  "required": ["accountId", "amount"]
+}

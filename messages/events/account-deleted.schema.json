@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "account-deleted-event",
+  "title": "Account Deleted Event",
+  "description": "Event that a existing banking account is deleted",
+  "type": "object",
+  "properties": {
+    "accountId": {
+      "description": "The unique id of the banking account",
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "required": [
+    "accountId"
+  ]
+}
