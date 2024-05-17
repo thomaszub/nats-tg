@@ -5,9 +5,13 @@
     "start": "ts-node index.ts"
   },
   "devDependencies": {
+    "@types/uuid": "^9.0.8",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "nats": "^2.25.0"
+    "ajv": "^8.13.0",
+    "ajv-formats": "^3.0.1",
+    "nats": "^2.25.0",
+    "uuid": "^9.0.1"
   }
 }

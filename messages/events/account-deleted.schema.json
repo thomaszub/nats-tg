@@ -10,8 +10,5 @@
       "type": "string",
       "format": "uuid"
     }
-  },
-  "required": [
-    "accountId"
-  ]
+  }
 }

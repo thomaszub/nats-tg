@@ -5,16 +5,11 @@
   "description": "Command that money should be withdrawn from a banking account",
   "type": "object",
   "properties": {
-    "accountId": {
-      "description": "The unique id of the banking account",
-      "type": "string",
-      "format": "uuid"
-    },
     "amount": {
       "description": "The amount of withdrawn money",
       "type": "number",
       "exclusiveMinimum": 0
     }
   },
-  "required": ["accountId", "amount"]
+  "required": ["amount"]
 }
