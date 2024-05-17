@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "CommandRejectedError",
+  "title": "Command Rejected Error",
+  "description": "Error that the execution of a issued command was rejected",
+  "type": "object",
+  "properties": {
+    "accountId": {
+      "description": "The unique id of the banking account",
+      "type": "string",
+      "format": "uuid"
+    },
+    "commandId": {
+      "description": "The unique id of the issued command",
+      "type": "string",
+      "format": "uuid"
+    },
+    "command": {
+      "description": "The command payload",
+      "type": "object"
+    }
+  },
+  "required": [
+    "accountId", "commandId", "command"
+  ]
+}
