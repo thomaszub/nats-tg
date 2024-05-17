@@ -18,9 +18,13 @@
     "command": {
       "description": "The command payload",
       "type": "object"
+    },
+    "reason": {
+      "description": "The reason of rejecting the command",
+      "type": "object"
     }
   },
   "required": [
-    "accountId", "commandId", "command"
+    "accountId", "commandId", "command", "reason"
   ]
 }
